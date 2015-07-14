@@ -1,4 +1,4 @@
-var AnswerGenerator = require("../main/answer_value.js");
+var AnswerGenerator = require("../main/answer_generator.js");
 
 describe("AnswerGenerator", function() {
     describe("generater", function() {

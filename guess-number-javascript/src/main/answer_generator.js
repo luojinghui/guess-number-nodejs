@@ -11,6 +11,7 @@ AnswerGenerator.prototype.generater = function(){
             this.fourNumber += temp;
         }
     }
+    return this.fourNumber;
 }
 
 module.exports = AnswerGenerator;

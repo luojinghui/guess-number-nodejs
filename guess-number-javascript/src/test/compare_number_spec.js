@@ -6,8 +6,8 @@ describe('CompareNumber',function() {
 
         it('judge four number position and correct', function() {
             var input = "1234";
-            var randomNumber = "5467";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("0A1B");
+            var randomNumber = "5678";
+            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("0A0B");
         });
 
         it('judge four number position and correct', function() {
@@ -18,8 +18,8 @@ describe('CompareNumber',function() {
 
         it('judge four number position and correct', function() {
             var input = "6789";
-            var randomNumber = "3721";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("1A0B");
+            var randomNumber = "6987";
+            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("2A2B");
         });
 
         it('judge four number position and correct', function() {
