@@ -1,31 +1,27 @@
 var CompareNumber = require('../main/compare_number.js');
 
 describe('CompareNumber',function() {
-    describe("judgeNumber",function() {
+    describe("#judgeNumber()",function() {
         var compare_number = new CompareNumber();
 
         it('judge four number position and correct', function() {
-            var input = "1234";
-            var randomNumber = "5678";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("0A0B");
+            var result = compare_number.judgeInputNumber("1234","5678")
+            expect(result).toBe("0A0B");
         });
 
         it('judge four number position and correct', function() {
-            var input = "1234";
-            var randomNumber = "4321";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("0A4B");
+            var result = compare_number.judgeInputNumber("1234","4321")
+            expect(result).toBe("0A4B");
         });
 
         it('judge four number position and correct', function() {
-            var input = "6789";
-            var randomNumber = "6987";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("2A2B");
+            var result = compare_number.judgeInputNumber("6789","6987")
+            expect(result).toBe("2A2B");
         });
 
         it('judge four number position and correct', function() {
-            var input = "4567";
-            var randomNumber = "4567";
-            expect(compare_number.judgeInputNumber(input,randomNumber)).toEqual("4A0B");
+            var result = compare_number.judgeInputNumber("4567","4567")
+            expect(result).toBe("4A0B");
         });
     });
 })

@@ -2,8 +2,8 @@ var Guess = require("../main/guess.js");
 var AnswerGenerator = require("../main/answer_generator.js");
 var CompareNumber = require("../main/compare_number.js");
 
-describe("Guess",function() {
-    describe("give one testNumber return answer",function() {
+describe("#Guess()",function() {
+    describe(".play()",function() {
         var randomNumber;
         var testNumber;
         var answer;

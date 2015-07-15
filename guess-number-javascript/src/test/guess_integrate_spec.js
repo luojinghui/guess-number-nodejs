@@ -1,28 +1,33 @@
 var Guess = require("../main/guess.js");
-var AnswerGenerator = require("../main/answer_generator.js");
-var CompareNumber = require("../main/compare_number.js");
 
-describe("Guess",function() {
-    describe("give one testNumber return answer",function() {
-        var randomNumber;
-        var testNumber;
-        var answer;
+describe("#Guess()",function() {
+    describe(".play()",function() {
+        var i;
+        var returnValue;
 
         beforeEach(function() {
             spyOn(Math, "random").and.callFake(function() {
-                console.log(randomNumber + "----------");
-                return randomNumber;
+                return returnValue[i++];
 
             });
         })
 
-        it('judge testNumber and answer is same', function() {
-            randomNumber = "1234";
-
+        it('guess_integrate_mock_Math.random_get_result', function() {
+            i = 0;
+            returnValue = [0.13423, 0.2234234, 0.34324135, 0.40674556];
             var guess = new Guess();
             var result = guess.play("1234");
 
             expect(result).toEqual("4A0B");
+        });
+
+        it('guess_integrate_mock_Math.random_get_result', function() {
+            i = 0;
+            returnValue = [0.13423, 0.2234234, 0.34324135, 0.40674556];
+            var guess = new Guess();
+            var result = guess.play("4321");
+
+            expect(result).toEqual("0A4B");
         });
     })
 })
